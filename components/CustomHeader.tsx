@@ -21,7 +21,7 @@ const SearchBar = () => {
           <Ionicons name='ios-search' size={20} color={Colors.medium}/>
           <TextInput placeholder="Hadi bir şeyler bulalım" style={{marginLeft:4}} />
         </View>
-        <Link href={'/'} asChild>
+        <Link href={'/(modal)/filter'} asChild>
           <TouchableOpacity style={styles.optionButton}>
             <Ionicons name="options-outline" size={20} color={Colors.primary} />
           </TouchableOpacity>

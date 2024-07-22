@@ -46,20 +46,24 @@ const BottomSheet = forwardRef<BottomSheetModal>((props, ref) => {
 
         <Text style={styles.subHeader}>Konumunuz</Text>
 
-        <Link asChild href={'/'}>
+        <Link asChild href={'/(modal)/location-search'}>
           <TouchableOpacity style={styles.item}>
-          <Ionicons name='location-outline'size={20}  color={Colors.medium}/>
-          <Text style={{flex:1}}>Ev</Text>
-          <Ionicons name='chevron-forward' size={20} color={Colors.primary}/>
+            <Ionicons name="location-outline" size={20} color={Colors.medium} />
+            <Text style={{ flex: 1 }}>Ev</Text>
+            <Ionicons name="chevron-forward" size={20} color={Colors.primary} />
           </TouchableOpacity>
         </Link>
 
         <Text style={styles.subHeader}>Tahmini Teslimat</Text>
         <Link asChild href={'/'}>
           <TouchableOpacity style={styles.item}>
-          <Ionicons name='stopwatch-outline'size={20}  color={Colors.medium}/>
-          <Text style={{flex:1}}>12 dk</Text>
-          <Ionicons name='chevron-forward' size={20} color={Colors.primary}/>
+            <Ionicons
+              name="stopwatch-outline"
+              size={20}
+              color={Colors.medium}
+            />
+            <Text style={{ flex: 1 }}>12 dk</Text>
+            <Ionicons name="chevron-forward" size={20} color={Colors.primary} />
           </TouchableOpacity>
         </Link>
 
@@ -94,7 +98,7 @@ const styles = StyleSheet.create({
     gap: 20,
     justifyContent: 'center',
     marginBottom: 20,
-    marginTop:10
+    marginTop: 10,
   },
   toggleActive: {
     backgroundColor: Colors.primary,
@@ -124,7 +128,7 @@ const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap:8,
-    marginHorizontal:20
+    gap: 8,
+    marginHorizontal: 20,
   },
 });

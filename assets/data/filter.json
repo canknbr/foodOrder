@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Acai",
+      "count": 7
+    },
+    {
+      "name": "Afrika",
+      "count": 9
+    },
+    {
+      "name": "Alkol",
+      "count": 330
+    },
+    {
+      "name": "Amerikan",
+      "count": 201
+    },
+    {
+      "name": "Barbekü",
+      "count": 73
+    },
+    {
+      "name": "Geç Kahvaltı",
+      "count": 118
+    },
+    {
+      "name": "Kekler",
+      "count": 36
+    },
+    {
+      "name": "Tatlı",
+      "count": 282
+    },
+    {
+      "name": "Falafel",
+      "count": 30
+    },
+    {
+      "name": "Alman",
+      "count": 5
+    },
+    {
+      "name": "Sağlıklı",
+      "count": 247
+    },
+    {
+      "name": "Hint",
+      "count": 112
+    },
+  
+    {
+      "name": "Pankekler",
+      "count": 15
+    },
+    {
+      "name": "Pizza",
+      "count": 208
+    },
+    {
+      "name": "Çorba",
+      "count": 8
+    },
+    {
+      "name": "Paket Servisler",
+      "count": 87
+    },
+    {
+      "name": "Dürümler",
+      "count": 99
+    }
+  ]
+  
