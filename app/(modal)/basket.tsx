@@ -6,6 +6,7 @@ import Colors from '@/constants/Colors';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import { Link } from 'expo-router';
+import GmailStyleSwipeableRow from '@/components/SwipeableRow';
 const BasketPage = () => {
   const { products, total, clearCart, reduceProduct } = useBasketStore();
   const [order, setOrder] = useState(false);
@@ -111,7 +112,7 @@ const BasketPage = () => {
                       color: Colors.primary,
                     }}
                   >
-                    ₺{fees.delivery + total}
+                    ₺{(fees.delivery + total).toFixed(2)}
                   </Text>
                 </View>
               </View>
@@ -119,15 +120,17 @@ const BasketPage = () => {
             data={products}
             renderItem={({ item }) => {
               return (
-                <View style={styles.row}>
-                  <Text style={{ color: Colors.primary, fontSize: 14 }}>
-                    {item.quantity}x
-                  </Text>
-                  <Text style={{ flex: 1, fontSize: 16 }}>{item.name}</Text>
-                  <Text style={{ fontSize: 16 }}>
-                    ₺{item.price * item.quantity}
-                  </Text>
-                </View>
+                <GmailStyleSwipeableRow onDelete={()=>reduceProduct(item)}>
+                  <View style={styles.row}>
+                    <Text style={{ color: Colors.primary, fontSize: 14 }}>
+                      {item.quantity}x
+                    </Text>
+                    <Text style={{ flex: 1, fontSize: 16 }}>{item.name}</Text>
+                    <Text style={{ fontSize: 16 }}>
+                      ₺{item.price * item.quantity}
+                    </Text>
+                  </View>
+                </GmailStyleSwipeableRow>
               );
             }}
           />
@@ -140,7 +143,7 @@ const BasketPage = () => {
                 <Text style={styles.footerText}>Sipariş Ver</Text>
                 <Text style={styles.footerTotal}>
                   {' '}
-                  ₺{fees.delivery + total}
+                  ₺{(fees.delivery + total).toFixed(2)}
                 </Text>
               </TouchableOpacity>
             </SafeAreaView>
@@ -231,7 +234,7 @@ const styles = StyleSheet.create({
     lineHeight: 60,
     alignSelf: 'center',
     shadowColor: Colors.primary,
-    paddingVertical:18,
-    marginTop:20
+    paddingVertical: 18,
+    marginTop: 20,
   },
 });
